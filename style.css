@@ -1,0 +1,38 @@
+* { box-sizing: border-box; }
+body { 
+    background: #0f172a; color: #f8fafc; font-family: 'Inter', sans-serif;
+    display: flex; justify-content: center; align-items: center; min-height: 100vh; margin: 0;
+}
+
+.app-card { 
+    background: #1e293b; width: 100%; max-width: 450px; padding: 25px;
+    border-radius: 20px; box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+}
+
+.header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 30px; }
+.badge { background: #10b981; padding: 5px 12px; border-radius: 20px; font-size: 12px; font-weight: bold; }
+
+.email-section label { font-size: 14px; color: #94a3b8; display: block; margin-bottom: 8px; }
+.input-container { display: flex; background: #0f172a; padding: 8px; border-radius: 12px; border: 1px solid #334155; }
+input { background: transparent; border: none; color: #38bdf8; flex: 1; padding: 10px; font-size: 16px; font-weight: 600; outline: none; }
+
+.btn-icon { background: #334155; border: none; border-radius: 8px; color: white; cursor: pointer; padding: 0 15px; }
+.btn-refresh { 
+    width: 100%; margin-top: 15px; padding: 12px; border: none; border-radius: 12px;
+    background: #38bdf8; color: #0f172a; font-weight: bold; cursor: pointer; transition: 0.3s;
+}
+.btn-refresh:hover { background: #7dd3fc; }
+
+.inbox-title { display: flex; align-items: center; gap: 10px; margin-top: 30px; border-bottom: 1px solid #334155; padding-bottom: 10px; }
+.pulse { width: 10px; height: 10px; background: #10b981; border-radius: 50%; box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); animation: pulse-red 2s infinite; }
+
+.mail-item { background: #334155; padding: 15px; border-radius: 10px; margin-top: 10px; cursor: pointer; transition: 0.2s; }
+.mail-item:hover { transform: scale(1.02); background: #475569; }
+
+@keyframes pulse-red { 0% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0.7); } 70% { box-shadow: 0 0 0 10px rgba(16, 185, 129, 0); } 100% { box-shadow: 0 0 0 0 rgba(16, 185, 129, 0); } }
+
+/* Modal */
+.modal { display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.8); z-index: 10; padding: 20px; }
+.modal-content { background: white; color: #1e293b; max-width: 500px; margin: 50px auto; padding: 25px; border-radius: 15px; position: relative; max-height: 80vh; overflow-y: auto; }
+.close { position: absolute; right: 20px; top: 15px; font-size: 30px; cursor: pointer; color: #64748b; }
+.mail-body-content { margin-top: 20px; line-height: 1.6; border-top: 1px solid #e2e8f0; padding-top: 15px; }
