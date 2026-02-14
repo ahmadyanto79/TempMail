@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>⚡ Temp mail Vir</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="app-card">
+        <div class="header">
+            <h2>⚡ Vir Tempmail</h2>
+            <div id="status-badge" class="badge">Sistem Aktif</div>
+        </div>
+
+        <div class="email-section">
+            <label>Alamat Email Anda:</label>
+            <div class="input-container">
+                <input type="text" id="email-address" readonly value="Menghasilkan...">
+                <button onclick="copyEmail()" class="btn-icon" title="Salin">📋</button>
+            </div>
+            <button onclick="generateNew()" class="btn-refresh">Ganti Email Baru</button>
+        </div>
+
+        <div class="inbox-section">
+            <div class="inbox-title">
+                <h3>Kotak Masuk</h3>
+                <div class="pulse"></div>
+            </div>
+            <div id="mail-list">
+                <p class="waiting">Menunggu email masuk...</p>
+            </div>
+        </div>
+    </div>
+
+    <div id="mail-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div class="mail-detail-header">
+                <h2 id="view-subject"></h2>
+                <p><strong>Dari:</strong> <span id="view-from"></span></p>
+            </div>
+            <div id="view-body" class="mail-body-content"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
